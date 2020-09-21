@@ -21,5 +21,5 @@ Feature: Account
 
     Examples:
       | username                     | password   |
-      | "sebastest@email.com"        | "password" |
+      | "jorgetest@email.com"        | "password" |
       | "un_correo_112233@gmail.com" | "passw123" |
