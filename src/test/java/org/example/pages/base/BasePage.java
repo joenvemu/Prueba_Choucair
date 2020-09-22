@@ -29,7 +29,7 @@ public class BasePage extends PageObject {
     }
 
     public void validateSignOutButton() {
-        waitFor(logoutButton);
+        //waitFor(logoutButton);
 
         Assert.assertEquals("Sign out", logoutButton.getText());
     }

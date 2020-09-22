@@ -16,6 +16,10 @@ public class ProfilePage extends PageObject {
     private WebElement accountLabel;
 
     public void checkProfilePage() {
-        Assert.assertEquals("MY ACCOUNT", accountLabel.getText());
+
+    }
+
+    public void validateMessage(String mensaje) {
+        Assert.assertEquals(mensaje, accountLabel.getText());
     }
 }

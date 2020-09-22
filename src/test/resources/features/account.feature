@@ -17,9 +17,21 @@ Feature: Account
     And I enter <password> in the password
     When I press the login button
     Then I should be taken to the Profile page
+    And The message this play <mensajeDeValidacion>
+
+    Examples:
+      | username                     | password   | mensajeDeValidacion |
+      | "jorgetest@email.com"        | "password" | "MY ACCOUNT"        |
+      | "un_correo_112233@gmail.com" | "passw123" | "AUTHENTICATION"    |
+
+  Scenario Outline: Validate sign out button
+    Given I am on the Authentication page of the Next Experience website
+    And I enter <username> in the username
+    And I enter <password> in the password
+    When I press the login button
+    Then I should be taken to the Profile page
     And I should see the "Sign Out" button in the top right corner
 
     Examples:
       | username                     | password   |
       | "jorgetest@email.com"        | "password" |
-      | "un_correo_112233@gmail.com" | "passw123" |
